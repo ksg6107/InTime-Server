@@ -1,6 +1,7 @@
 import discord
+import os
 
-client = discord.Client()
+lient = discord.Client()
 
 @client.event
 async def on_ready():
@@ -25,5 +26,5 @@ async def on_message(message):
 
 
 
-#구동 할 봇 토큰
-client.run("Nzg3NTg5Mjg5OTUzMDY3MDE4.X9XJrw.EloVNbrvm7IDV60m9vJm-jd8QNM")
+access_token = os.environ["BOT_token"]
+client.run(access_token)
